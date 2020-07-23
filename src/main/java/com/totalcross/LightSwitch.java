@@ -8,6 +8,7 @@ import totalcross.io.device.gpiod.GpiodChip;
 import totalcross.io.device.gpiod.GpiodLine;
 import totalcross.ui.event.ControlEvent;
 import totalcross.ui.event.PressListener;
+import totalcross.util.UnitsConverter;
 import totalcross.sys.Settings;
 
 public class LightSwitch extends MainWindow {
@@ -49,13 +50,12 @@ public class LightSwitch extends MainWindow {
         icLight = new ImageControl(Images.iLightOff);
         icLight.scaleToFit = true;
 
-        // Position light bulb image at the center of the screen,
-        // with a width of 357 pixels and height of 450 pixels 
-        add(icLight, CENTER, CENTER - 40, 357, 450);
+        // Position light bulb at the center of the screen,
+        // using the original size of the image
+        add(icLight, CENTER, CENTER - UnitsConverter.toPixels(DP + 40), PREFERRED, PREFERRED);
 
-        // Position switch component below the center of the screen,
-        // with a width of 150 pixels and height of 30 pixels
-        add(swLightSwitch, CENTER, AFTER, 150, 30);
+        // Position the switch below the image
+        add(swLightSwitch, CENTER, AFTER, UnitsConverter.toPixels(DP + 150), UnitsConverter.toPixels(DP + 30));
 
         // Add a press listener to the switch
         swLightSwitch.addPressListener(onSwitchPressed);
