@@ -18,7 +18,7 @@
         <dependency>
             <groupId>com.totalcross</groupId>
             <artifactId>totalcross-sdk</artifactId>
-            <version>6.0.4</version>
+            <version>6.1.0</version>
         </dependency>
     </dependencies>
 
@@ -53,7 +53,7 @@
             <plugin>
                 <groupId>com.totalcross</groupId>
                 <artifactId>totalcross-maven-plugin</artifactId>
-                <version>1.1</version>
+                <version>1.1.6</version>
                 <configuration>
                     <name>${project.name}</name>
                     <platforms>
