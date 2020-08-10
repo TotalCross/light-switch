@@ -1,1 +1,1 @@
-# LightSwitch
+# light-switch
